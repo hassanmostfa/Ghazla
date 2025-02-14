@@ -58,6 +58,6 @@ class AdminController extends Controller
     // Admin Dashboard 
     public function adminDashboard()
     {
-        return view('admin.dashboard');
+        return redirect()->route('admin.categories');
     }
 }
