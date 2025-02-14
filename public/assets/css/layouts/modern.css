@@ -165,7 +165,7 @@ html.modern .header .separator {
 html.modern .header-right {
 	display: flex;
 	align-items: center;
-	height: 66px;
+	/* height: 66px; */
 }
 
 html.modern .dropdown-language {

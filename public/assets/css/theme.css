@@ -3950,7 +3950,7 @@ html.dark .inner-menu .inner-menu-toggle-inside:after {
 
 .header-right {
 	float: right;
-	height: 56px;
+	/* height: 56px; */
 }
 
 html.has-left-sidebar-half .header {
