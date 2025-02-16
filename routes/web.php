@@ -21,7 +21,7 @@ use App\Http\Controllers\OTPController;
 */
 
 Route::get('/', function () {
-    return route('admin.categories');
+    return redirect()->route('admin.categories');
 })->name('home');
 
 // OTP Routes

@@ -39,11 +39,17 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'image' => 'nullable|image',
         ]);
 
         $category = new Category();     
 
         $category->name = $request->name;
+
+        if ($request->hasFile('image')) {
+            $category->image = $request->file('image');
+          
+        }
 
         $category->save();  
 
@@ -88,6 +94,7 @@ class CategoryController extends Controller
     {
         $request->validate([    
             'name' => 'required',   
+            'image' => 'nullable|image',
         ]);
 
         try {
@@ -95,6 +102,9 @@ class CategoryController extends Controller
 
             $category->name = $request->name;
 
+            if ($request->hasFile('image')) {
+                $category->image = $request->file('image');
+            }
             $category->save();
 
             return redirect()->route('admin.categories')->with('success', 'تم تعديل التصنيف بنجاح');

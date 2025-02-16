@@ -27,6 +27,21 @@
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>
+        
+        <!-- Ad Image -->
+        <div class="mb-3">
+            <label for="image" style="font-weight: 600; font-size: 18px" class="form-label">صورة الإعلان</label>
+            <input type="file" class="form-control" id="image" name="image">
+            @error('image')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+            <!-- Display current image -->
+            @if ($category->image)
+                <div class="mt-2">
+                    <img src="{{ $category->image }}" alt="{{ $category->name }}" style="max-width: 200px;">
+                </div>
+            @endif
+        </div>
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">حفظ التعديلات</button>
         <a href="{{ route('admin.categories') }}" class="btn btn-secondary">إلغاء</a>
