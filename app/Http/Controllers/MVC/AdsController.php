@@ -38,8 +38,8 @@ class AdsController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'link' => 'required|url',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'link' => 'nullable',
+            'image' => 'nullable',
         ]);
 
         // Create the ad

@@ -28,7 +28,7 @@
         <!-- Ad Link -->
         <div class="mb-3">
             <label for="link" style="font-weight: 600; font-size: 18px" class="form-label">رابط الإعلان</label>
-            <input type="url" class="form-control" id="link" name="link" value="{{ old('link') }}" required>
+            <input type="url" class="form-control" id="link" name="link" value="{{ old('link') }}" >
             @error('link')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
@@ -37,7 +37,7 @@
         <!-- Ad Image -->
         <div class="mb-3">
             <label for="image" style="font-weight: 600; font-size: 18px" class="form-label">صورة الإعلان</label>
-            <input type="file" class="form-control" id="image" name="image" required>
+            <input type="file" class="form-control" id="image" name="image" >
             @error('image')
                 <div class="text-danger">{{ $message }}</div>
             @enderror

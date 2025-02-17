@@ -115,7 +115,10 @@ a:active {
 
 /* Layout Base - Page Header */
 .page-header {
-	background:#e43c59;/* #171717 */
+	/* #fd780f
+#ffffff
+#404041 */
+	background:#f06800;/* #171717 */
 	border-bottom: none;
 	border-left: 1px solid #3A3A3A;
 	box-shadow: 1px 3px 0 1px #CCCCCC;
