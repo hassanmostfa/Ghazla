@@ -39,7 +39,7 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'image' => 'nullable|image',
+            'image' => 'nullable',
         ]);
 
         $category = new Category();     
@@ -94,7 +94,7 @@ class CategoryController extends Controller
     {
         $request->validate([    
             'name' => 'required',   
-            'image' => 'nullable|image',
+            'image' => 'nullable',
         ]);
 
         try {
