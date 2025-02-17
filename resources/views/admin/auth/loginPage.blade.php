@@ -36,6 +36,7 @@
 
     <div class="container-fluid login-container">
         <div class="login-box">
+            <img src="{{ asset('assets/images/gz2-removebg-preview.png') }}" alt="Logo" width="100" class="m-auto d-block">
             <h3 class="text-center mb-4  fw-bold card-title">تسجيل دخول مشرف</h3>
             <form method="POST" action="{{route('admin.login')}}">
                 @csrf

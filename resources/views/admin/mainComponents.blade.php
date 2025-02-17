@@ -13,6 +13,7 @@
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+		<link rel="shortcut icon" href="{{ asset('assets/images/gz2-removebg-preview.png') }}" />
 		<!-- Web Fonts  -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
@@ -64,8 +65,9 @@
 			<!-- start: header -->
 			<header class="header">
 				<div class="logo-container">
-					<a href="#" class="logo">
-						مرحبا بعودتك
+					<a href="#" class="logo" style="color: #f06800;font-size: 39px;">
+						{{-- <img src="{{ asset('assets/images/gz2-removebg-preview.png') }}" alt="Logo" width="10" class="m-auto d-block"> --}}
+						غزلة 
 					</a>
 
 					<div class="d-md-none toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
@@ -90,7 +92,7 @@
 
 				    <div class="sidebar-header">
 				        <div class="sidebar-title">
-				            Navigation
+				            
 				        </div>
 				        <div class="sidebar-toggle d-none d-md-block" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
 				            <i class="fas fa-bars" aria-label="Toggle sidebar"></i>
