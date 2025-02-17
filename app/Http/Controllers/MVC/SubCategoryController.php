@@ -5,7 +5,7 @@ namespace App\Http\Controllers\MVC;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
-use App\Models\SubCategory;
+use App\Models\Subcategory;
 
 class SubCategoryController extends Controller
 {
@@ -20,7 +20,7 @@ class SubCategoryController extends Controller
             // get all categories
             $categories = Category::all();
             //get all SubCategories
-            $subCategories = SubCategory::all()->sortBy('category_id');
+            $subCategories = Subcategory::all()->sortBy('category_id');
             return view('admin.categories.subCategories.subCategories', compact('subCategories' , 'categories'));
         } catch (\Throwable $th) {
             return redirect()->back()->with('error', $th->getMessage());
@@ -48,7 +48,7 @@ class SubCategoryController extends Controller
 
         try
         {
-            $subCategory = new SubCategory();
+            $subCategory = new Subcategory();
             $subCategory->category_id = $request->category_id;
             $subCategory->name = $request->name;
             $subCategory->save();
@@ -69,7 +69,7 @@ class SubCategoryController extends Controller
     {
         try
         {
-            $subCategory = SubCategory::find($id);
+            $subCategory = Subcategory::find($id);
             $categories = Category::all();
             return view('admin.categories.subCategories.editSubCategories', compact('subCategory' , 'categories'));
         } catch (\Throwable $th) {
@@ -94,7 +94,7 @@ class SubCategoryController extends Controller
 
         try {
             // Find the category by ID
-            $subCategory = SubCategory::find($id);
+            $subCategory = Subcategory::find($id);
 
             
             // Update the name
@@ -121,7 +121,7 @@ class SubCategoryController extends Controller
     public function destroy($id)
     {
         try {
-            $subCategory = SubCategory::find($id);
+            $subCategory = Subcategory::find($id);
             $subCategory->delete();
             return redirect()->route('admin.subCategories')->with('success', 'تم حذف التصنيف بنجاح');
         } catch (\Throwable $th) {
@@ -133,7 +133,7 @@ class SubCategoryController extends Controller
     public function getSubcategories($categoryId)
     {
         // Fetch subcategories related to the category ID
-        $subcategories = SubCategory::where('category_id', $categoryId)->get();
+        $subcategories = Subcategory::where('category_id', $categoryId)->get();
         return response()->json($subcategories);
     }
 
