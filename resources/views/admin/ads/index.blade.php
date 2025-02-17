@@ -45,7 +45,7 @@
                             <td>{{ $ad->id }}</td>
                             <td>{{ $ad->title ?? '---' }}</td>
                             <td>
-                            @if ($ad->image)
+                                @if ($ad->image)
                                     <img src="{{ $ad->image }}" alt="image" width="80" height="60" style="object-fit:cover;border-radius:5px;">
                                 @else
                                     ---

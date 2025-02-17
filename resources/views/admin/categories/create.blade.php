@@ -29,8 +29,8 @@
         </div>
         <!-- Ad Image -->
         <div class="mb-3">
-            <label for="image" style="font-weight: 600; font-size: 18px" class="form-label">صورة الإعلان</label>
-            <input type="file" class="form-control" id="image" name="image" required>
+            <label for="image" style="font-weight: 600; font-size: 18px" class="form-label">صورة </label>
+            <input type="file" class="form-control" id="image" name="image" >
             @error('image')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
