@@ -16,7 +16,7 @@ class AdsController extends Controller
     {
         // get all adds
         $ads = Ad::all();
-        return response()->json($ads);
+        return response()->json(["data" => $ads]);
     }
 
     /**

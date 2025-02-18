@@ -17,7 +17,7 @@ class SubCategoryController extends Controller
     {
         // get all subcategories for specific category
         $subCategories = Subcategory::where('category_id', $categorId)->get();
-        return response()->json($subCategories);
+        return response()->json(["data" => $subCategories]);
     }
 
     /**

@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         // get products for specific subcategory
         $products = Product::where('subcategory_id', $subcategoryId)->get();
-        return response()->json($products);
+        return response()->json(["data" => $products]);
     }
 
     /**
